@@ -46,13 +46,13 @@ public class TaskServiceImpl implements TaskService {
 
     // Modificar una tarea
     @Override
-    public Task updateTask(Long id, Task taskDetails) {
+    public Task updateTask(Long id, TaskDTO taskDTO) {
         Task task = getTaskById(id);
 
-        task.setTitle(taskDetails.getTitle());
-        task.setDescription(taskDetails.getDescription());
-        task.setPriority(taskDetails.getPriority());
-        task.setUpdatedAt(taskDetails.getUpdatedAt());
+        task.setTitle(taskDTO.getTitle());
+        task.setDescription(taskDTO.getDescription());
+        task.setPriority(taskDTO.getPriority());
+        task.setUpdatedAt(taskDTO.getUpdatedAt());
 
         return taskRepository.save(task);
     }
