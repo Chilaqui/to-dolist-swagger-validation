@@ -3,6 +3,7 @@ package com.backend.todolist.service;
 import java.util.List;
 
 import com.backend.todolist.model.Task;
+import com.backend.todolist.model.Dtos.TaskDTO;
 
 public interface TaskService {
 
@@ -10,7 +11,7 @@ public interface TaskService {
 
     Task getTaskById(Long id);
 
-    Task createTask(Task task);
+    Task createTask(TaskDTO taskDTO);
 
     Task updateTask(Long id, Task taskDetails);
 
