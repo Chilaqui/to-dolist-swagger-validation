@@ -23,7 +23,7 @@ services:
       PMA_HOST: app
       PMA_PORT: 3306
     ports:
-      - "8080:80"
+      - "8081:80"
     depends_on:
       - app
     networks:
@@ -32,7 +32,7 @@ services:
 volumes:
   mysql_data: 
     driver: local 
-    
+
 networks:
   todolist_network:
     driver: bridge
