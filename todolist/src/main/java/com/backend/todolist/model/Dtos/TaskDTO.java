@@ -1,5 +1,7 @@
 package com.backend.todolist.model.Dtos;
 
+import java.time.LocalDateTime;
+
 import com.backend.todolist.emuns.Priority;
 import com.backend.todolist.emuns.TaskStatus;
 
@@ -15,7 +17,17 @@ public class TaskDTO {
 
     private TaskStatus status;
 
+    private LocalDateTime updatedAt;
+
     
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
     public String getTitle() {
         return title;
     }
