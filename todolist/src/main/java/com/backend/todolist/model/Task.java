@@ -12,22 +12,31 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Task {
 
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable =false)
+
+    @Column(nullable = false)
+    @NotNull(message = "El titulo es obligatorio")
     private String title;
+
     @Column(length = 500)
     private String description;
+
     @Enumerated(EnumType.STRING)
     private Priority priority;
+
     @Enumerated(EnumType.STRING)
     private TaskStatus status;
+
     private LocalDateTime createdAt;
+    
     private LocalDateTime updatedAt;
 
     
