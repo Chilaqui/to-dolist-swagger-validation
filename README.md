@@ -179,8 +179,8 @@ docker-compose up -d mysql_db phpmyadmin
 
 ## 👨‍💻 Autor
 
-**[Hector]**
-- GitHub: [@tu-usuario](https://github.com/Chilaqui)
+**Hector**
+- GitHub: [@Chilaqui](https://github.com/Chilaqui)
 
 ---
 
